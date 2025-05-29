@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Delius&family=Revalia&display=swap');
+
+:root {
+    --cor-principal: #110e0f;
+    --cor-secundaria: #ffffff;
+     --cor-destaque: #e9cbcbd2;
+      --text-color: #17db8ae5;
+    --card-front-color: #102c7ad2;
+    --card-back-color: #ffffff;
+}
+    body {
+          font-family: "Yeseva One", serif;
+      color: var(--cor-principal);
+      background-image: url(images\ \(2\).jpg);
+       background-repeat: no-repeat;
+      background-size: cover;
+
+    }
+    
+      h1{
+        color: var(--cor-principal)
+      }
+     h4, h5, h6{
+      color: var(--cor-secundaria);
+      font-weight: 500;
+    }
+    
+    #container {
+    display: flex;
+     flex-wrap: wrap;
+     justify-content: space-between;
+     padding: 0.7rem;
+     gap: 1rem
+}
+
+.cartao {
+    margin: 0.5rem 0.5rem;
+    height: 17rem;
+    flex-grow: 1;
+    flex-basis: calc(33% -6rem);
+}
+
+.cartao__conteudo {
+  background-color: var(--card-front-color);
+  border-radius: 0.6rem;
+    text-align: center;
+    /* background-color: aquamarine; */
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 300ms ease-in-out;
+}
+
+.cartao__conteudo h3 {
+     color: var(--text-color);
+    border: 1px solid var(--text-color);
+    text-align: left;
+    padding: 0.5rem;
+    position: absolute;
+    margin: 0.6rem;
+    border-radius: 0.6rem;
+    font-size: 0.7vw;
+     backface-visibility: hidden;
+}
+
+.cartao_conteudo p {
+    margin-top: 1rem;
+    padding: 2rem;
+      margin-top: 4rem;
+}
+
+.cartao__conteudo__pergunta p {
+    color: var(--text-color);
+    font-weight: 700;
+     margin-top: 4rem;
+}
+
+.cartao__conteudo__resposta p {
+    color: var(--card-back-color);
+    font-weight: 500;
+}
+
+.cartao:hover .cartao__conteudo {
+    transform: rotateY(180deg);
+}
+
+.cartao__conteudo__pergunta,
+.cartao__conteudo__resposta {
+    backface-visibility: hidden;
+     position: absolute;
+     height: 75%;
+    width: 100%;
+}
+
+.cartao__conteudo__resposta {
+    transform: rotateY(180deg);
+    margin-top: 2rem;
+}
+
+
+    
